@@ -10,6 +10,10 @@ module.exports = {
 	"parserOptions": {
 		"ecmaVersion": "latest"
 	},
+  	"globals": {
+  		"React": true,
+  		"process": true
+  	},
 	"rules": {
 		'no-console': 0,
 		"indent": [

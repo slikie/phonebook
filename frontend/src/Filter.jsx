@@ -1,9 +1,9 @@
 const Filter = ({ newSearch, handleSearchChange }) => {
-  return (
-    <div>
+    return (
+        <div>
       Filter show with: <input value={newSearch} onChange={handleSearchChange} />
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Filter
