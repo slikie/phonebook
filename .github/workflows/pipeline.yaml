@@ -13,7 +13,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '19'
-#      - uses: superfly/flyctl-actions/setup-flyctl@master
       - name: Install frontend dependencies
         run: cd frontend && npm install
 #      - name: Check style
@@ -31,6 +30,7 @@ jobs:
       #     command: npm run test:e2e
       #     start: npm run start-prod
       #     wait-on: http://localhost:5000
+      - uses: superfly/flyctl-actions/setup-flyctl@master
       - name: fly.io deployment
         id: fly
         if: ${{ github.event_name == 'push' && !contains( join(toJson(github.event.commits.*.message)), '#skip' ) }}
