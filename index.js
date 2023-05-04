@@ -101,6 +101,16 @@ const errorHandler = (error, request, response, next) => {
     next(error)
 }
 
+
+app.get('/health', (req, res) => {
+  res.send('ok')
+})
+
+app.get('/version', (req, res) => {
+  res.send('1')
+})
+
+
 app.use(errorHandler)
 
 const PORT = process.env.PORT || 3001
