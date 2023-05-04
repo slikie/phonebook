@@ -15,13 +15,15 @@ jobs:
           node-version: '19'
       - name: Install frontend dependencies
         run: cd frontend && npm install
-#      - name: Check style
-#        run: npm run eslint
+      - name: Check style on frontend
+        run: cd frontend && npm run lint
       - name: Build frontend, move to root
         id: build
         run: cd frontend && npm run build && mv dist/ ../ && cd ../
       - name: Install backend dependencies
         run: npm install
+      - name: Check style on backend
+        run: npm run lint
       # - name: Test
       #   run: npm run test
       # - name: e2e tests
