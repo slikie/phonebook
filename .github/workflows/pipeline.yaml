@@ -20,7 +20,7 @@ jobs:
 #        run: npm run eslint
       - name: Build frontend, move to root
         id: build
-        run: npm run build && mv dist/ ../ && cd ../
+        run: cd frontend && npm run build && mv dist/ ../ && cd ../
       - name: Install backend dependencies
         run: npm install
       # - name: Test
