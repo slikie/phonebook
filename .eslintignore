@@ -1,3 +1,5 @@
+cypress.config.js
+cypress/
 build
 dist
 .eslintrc.js
