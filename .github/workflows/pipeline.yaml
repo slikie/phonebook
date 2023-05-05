@@ -24,14 +24,6 @@ jobs:
         run: npm install
       - name: Check style on backend
         run: npm run lint
-      # - name: Test
-      #   run: npm run test
-      # - name: e2e tests
-      #   uses: cypress-io/github-action@v5
-      #   with:
-      #     command: npm run test:e2e
-      #     start: npm run start-prod
-      #     wait-on: http://localhost:5000
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
@@ -63,7 +55,7 @@ jobs:
         with:
           severity: info
           description: to https://phonebook-6583.fly.dev/ by ${{ github.event.commits[0].committer.username }}
-          text: A new version of Pokedex deployed
+          text: A new version of Phonebook deployed
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   tag_release:
     needs: [simple_deployment_pipeline]
