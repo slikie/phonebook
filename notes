@@ -1,5 +1,3 @@
-method.
-
 task:
 - to build and serve
 x- build frontend
@@ -12,14 +10,14 @@ x- build backend
 x	- go to backend dir
 x	- npm i
 x	- (npm lint)
-	- npm run test
-	- run e2e test
-	- deploy on fly
-		- npm run (serve)
+x	- npm run test
+x	- run e2e test
+x	- deploy on fly
+x		- npm run (serve)
 
 
 - Misc
 x	- write build FOR FLY
 
-	- set up e2e test
-	- set up health check
+x	- set up e2e test
+x	- set up health check
